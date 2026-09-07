@@ -1,34 +1,134 @@
-
-<!-- นี่คือโครงสร้างหน้าเว็บทังหมด ้ -->
+```html
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>หน้าแนะนำตัวของฉัน</title>
+
 <style>
+
 body {
-background-color: #80deea; color: #333;
-text-align: center; padding: 50px;
-
+    background-color: #80deea;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, Tahoma, sans-serif;
 }
+
+/* กล่องแนะนำตัว */
+
 .card {
-background: white; border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
-
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 35px;
 }
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
+
+/* หัวข้อ */
+
+h1 {
+    color: #2c3e50;
+}
+
+h2 {
+    color: #0277bd;
+}
+
+/* ข้อความ */
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* รูปโปรไฟล์ */
+
+.profile {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #80deea;
+}
+
+/* ปุ่ม */
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0277bd;
+}
+
 </style>
+
 </head>
+
+
 <body>
+
 <div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีครับ! ผมชื่อ <strong>นายธนโชติ วรรณวิสิทธิ์ (Thanachot Wannawisit)</strong></p>
-<p>ขณะนี้กำลังศึกษา/สนใจด้าน Computer Science & Engineering</p>
-<p>นี่คือเว็บไซต์แรกของผมที่โฮสต์บน GitHub Pages!</p>
-  <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
+
+    <!-- รูปโปรไฟล์ -->
+    <img
+        src="WIN_20260612_10_28_34_Pro.jpg"
+        alt="รูปโปรไฟล์ของฉัน"
+        class="profile"
+    >
+
+    <h1>
+        👋 ยินดีต้อนรับสู่โปรไฟล์ของฉัน
+    </h1>
+
+    <h2>
+        นายธนโชติ วรรณวิสิทธิ์
+    </h2>
+
+    <p>
+        <strong>Thanachot Wannawisit</strong>
+    </p>
+
+    <p>
+        ผมเป็นนักเรียนที่สนใจด้าน
+        <strong>วิศวกรรมศาสตร์</strong>
+        และเทคโนโลยี
+    </p>
+
+    <p>
+        ผมสนใจการเขียนโปรแกรม
+        การพัฒนาเว็บไซต์ การออกแบบ 3D
+        และการแก้ไขปัญหาอย่างเป็นระบบ
+    </p>
+
+    <p>
+        🎯 เป้าหมายของผมคือ
+        การศึกษาต่อในคณะวิศวกรรมศาสตร์
+        และนำความรู้ไปพัฒนาผลงานด้านเทคโนโลยี
+    </p>
+
+    <a href="portfolio.html" class="btn">
+        👉 ดูแฟ้มสะสมงานของผม
+    </a>
 
 </div>
+
 </body>
+
 </html>
+```
+
