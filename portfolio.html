@@ -1,38 +1,397 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 <meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟมสะสมงานของฉัน </title>
+
+<!-- กำหนดให้เว็บไซต์แสดงผลเหมาะกับมือถือ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>แฟ้มสะสมงานของฉัน</title>
+
 <style>
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+
+/* ------------------------------
+   ส่วนที่ 1 : การจัดหน้าหลัก
+------------------------------ */
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f7f6;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* ------------------------------
+   ส่วนหัว Portfolio
+------------------------------ */
+
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+
+/* ------------------------------
+   รูปโปรไฟล์
+------------------------------ */
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    margin: 20px auto;
+}
+
+
+/* ------------------------------
+   การ์ดผลงาน
+------------------------------ */
+
+.project-card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.project-card h3 {
+    color: #2c3e50;
+}
+
+.project-card p {
+    line-height: 1.6;
+}
+
+
+/* ------------------------------
+   ส่วนทักษะ
+------------------------------ */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill {
+    background: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+
+/* ------------------------------
+   ปุ่มกลับหน้าแรก
+------------------------------ */
+
+.btn {
+    display: inline-block;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #3498db;
+}
+
+
+/* ------------------------------
+   ส่วนท้ายเว็บไซต์
+------------------------------ */
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    color: #555;
+}
+
+
+/* ------------------------------
+   รองรับหน้าจอมือถือ
+------------------------------ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+
+}
+
 </style>
 </head>
+
+
 <body>
+
 <div class="container">
-<h1> แฟมสะสมงาน   (Portfolio)นายธนโชติ วรรณวิสิทธิ์</h1>
-<img src="WIN_20260612_10_28_34_Pro.jpg" alt="รูปโปรไฟล์ของฉัน" width="200">
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
-<!-- กล่องผลงานชนที่ ้ิ 1 -->
+
+
+<!-- ==========================
+     ส่วนหัว
+========================== -->
+
+<div class="header">
+
+    <h1>
+        📁 แฟ้มสะสมงาน
+        <br>
+        (Portfolio)
+    </h1>
+
+    <h2>
+        นายธนโชติ วรรณวิสิทธิ์
+    </h2>
+
+</div>
+
+
+<!-- ==========================
+     ส่วนแนะนำตัว
+========================== -->
+
+<div class="project-card" style="text-align:center;">
+
+    <h2>👨‍💻 ประวัติส่วนตัว</h2>
+
+    <!-- รูปโปรไฟล์ -->
+    <img
+        src="1788788502619.jpg"
+        alt="รูปโปรไฟล์ของฉัน"
+        class="profile-img"
+    >
+
+    <p>
+        สวัสดีครับ ผมชื่อ
+        <strong>นายธนโชติ วรรณวิสิทธิ์</strong>
+    </p>
+
+    <p>
+        นี่คือพื้นที่รวบรวมผลงาน
+        กิจกรรม และสิ่งที่ผมภูมิใจ
+    </p>
+
+</div>
+
+
+<!-- ==========================
+     ผลงานที่ 1
+========================== -->
+
 <div class="project-card">
-<h3>1. โครงงาน/เช่นงานวิทยาศาสตร์คำนวณ </h3>
-<p>รายละเอียดชิ้นงาน : เขียนอธิบายสันๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
+
+    <h3>
+        💻 1. โครงงาน / งานวิทยาการคำนวณ
+    </h3>
+
+    <p>
+        <strong>รายละเอียดชิ้นงาน:</strong>
+    </p>
+
+    <p>
+        การสร้างเว็บไซต์แฟ้มสะสมผลงานด้วย HTML และ CSS
+        เพื่อรวบรวมข้อมูลส่วนตัว ผลงาน และกิจกรรมต่าง ๆ
+    </p>
+
+    <p>
+        <strong>สิ่งที่ได้เรียนรู้:</strong>
+        ได้เรียนรู้การใช้แท็ก HTML
+        การจัดหน้าเว็บไซต์ด้วย CSS
+        และการนำเว็บไซต์ขึ้น GitHub Pages
+    </p>
+
 </div>
-<!-- กล่องผลงานชนที่ ้ิ 2 -->
+
+
+<!-- ==========================
+     ผลงานที่ 2
+========================== -->
+
 <div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดชิ้นงาย : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
+
+    <h3>
+        🎨 2. ผลงานการสร้างงาน 3D
+    </h3>
+
+    <p>
+        <strong>รายละเอียดชิ้นงาน:</strong>
+    </p>
+
+    <p>
+        การออกแบบและสร้างโมเดล 3D
+        โดยใช้โปรแกรม Autodesk 3ds Max
+    </p>
+
+    <p>
+        <strong>สิ่งที่ได้เรียนรู้:</strong>
+        ได้ฝึกการออกแบบวัตถุ
+        การสร้างรูปทรง
+        การใส่วัสดุ และการจัดแสง
+    </p>
+
 </div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
+
+
+<!-- ==========================
+     ผลงานที่ 3
+========================== -->
+
+<div class="project-card">
+
+    <h3>
+        🍫 3. ผลงานโมเดลช็อกโกแลต
+    </h3>
+
+    <p>
+        <strong>รายละเอียดชิ้นงาน:</strong>
+    </p>
+
+    <p>
+        การสร้างโมเดลช็อกโกแลตแบบแท่ง
+        และออกแบบบรรจุภัณฑ์ด้วยโปรแกรม 3D
+    </p>
+
 </div>
+
+
+<!-- ==========================
+     กิจกรรม
+========================== -->
+
+<div class="project-card">
+
+    <h3>
+        🏫 4. กิจกรรมและประสบการณ์
+    </h3>
+
+    <p>
+        เข้าร่วมกิจกรรมการเรียนรู้ด้านเทคโนโลยี
+        วิทยาการคำนวณ และกิจกรรมต่าง ๆ ของโรงเรียน
+    </p>
+
+</div>
+
+
+<!-- ==========================
+     เกียรติบัตร
+========================== -->
+
+<div class="project-card">
+
+    <h3>
+        🏆 5. เกียรติบัตร
+    </h3>
+
+    <p>
+        สามารถเพิ่มเกียรติบัตรที่ได้รับ
+        จากกิจกรรมหรือการอบรมต่าง ๆ
+        ลงในส่วนนี้ได้
+    </p>
+
+</div>
+
+
+<!-- ==========================
+     ทักษะ
+========================== -->
+
+<div class="project-card">
+
+    <h3>
+        🛠️ 6. ทักษะที่มี
+    </h3>
+
+    <div class="skills">
+
+        <span class="skill">HTML</span>
+
+        <span class="skill">CSS</span>
+
+        <span class="skill">C Programming</span>
+
+        <span class="skill">GitHub</span>
+
+        <span class="skill">3D Modeling</span>
+
+        <span class="skill">Autodesk 3ds Max</span>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================
+     เป้าหมาย
+========================== -->
+
+<div class="project-card">
+
+    <h3>
+        🚀 7. เป้าหมายในอนาคต
+    </h3>
+
+    <p>
+        ต้องการพัฒนาความรู้ด้านการเขียนโปรแกรม
+        การพัฒนาเว็บไซต์ เทคโนโลยี
+        และการสร้างผลงานดิจิทัล
+    </p>
+
+</div>
+
+
+<!-- ==========================
+     ปุ่มกลับหน้าแรก
+========================== -->
+
+<a href="index.html" class="btn">
+    🏠 กลับหน้าแรก
+</a>
+
+
+<footer>
+
+    <p>
+        © 2026 Thanachot Wannawisit
+    </p>
+
+</footer>
+
+
+</div>
+
 </body>
 </html>
-
-ส่วนที่1: การเรยนรู้แท็กใหม่และการจัดหน้าจอ
