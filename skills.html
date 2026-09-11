@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 
@@ -12,6 +11,10 @@
 
 <style>
 
+/* ==========================
+   พื้นหลัง
+========================== */
+
 body {
     font-family: sans-serif;
     background-color: #FFE4E1;
@@ -20,13 +23,20 @@ body {
     margin: 0;
 }
 
+
+/* ==========================
+   กล่องหลัก
+========================== */
+
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
 
-/* ส่วนหัว */
+/* ==========================
+   ส่วนหัว
+========================== */
 
 .header {
     background: #2c3e50;
@@ -45,7 +55,9 @@ body {
 }
 
 
-/* การ์ด */
+/* ==========================
+   การ์ด
+========================== */
 
 .skill-card {
     background: white;
@@ -60,24 +72,61 @@ body {
 }
 
 
-/* ทักษะ */
+/* ==========================
+   ทักษะด้านเทคโนโลยี
+========================== */
 
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-}
-
-.skill {
-    background: #3498db;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 20px;
+    gap: 20px;
 }
 
 
-/* ทักษะด้านการทำงาน */
+/* กล่องแต่ละทักษะ */
+
+.skill-item {
+    background: #f8f9fa;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+
+/* เวลาเอาเมาส์ไปวาง */
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* รูปทักษะ */
+
+.skill-item img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+/* ชื่อทักษะ */
+
+.skill-item p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 5px 0;
+}
+
+
+/* ==========================
+   ทักษะด้านการทำงาน
+========================== */
 
 .skill-list {
     text-align: left;
@@ -86,7 +135,9 @@ body {
 }
 
 
-/* ปุ่ม */
+/* ==========================
+   ปุ่ม
+========================== */
 
 .btn {
     display: inline-block;
@@ -103,7 +154,9 @@ body {
 }
 
 
-/* ส่วนท้าย */
+/* ==========================
+   ส่วนท้าย
+========================== */
 
 footer {
     margin-top: 30px;
@@ -112,7 +165,9 @@ footer {
 }
 
 
-/* มือถือ */
+/* ==========================
+   สำหรับมือถือ
+========================== */
 
 @media (max-width: 600px) {
 
@@ -126,6 +181,15 @@ footer {
 
     .header h2 {
         font-size: 20px;
+    }
+
+    .skill-item {
+        width: 160px;
+    }
+
+    .skill-item img {
+        width: 120px;
+        height: 120px;
     }
 
 }
@@ -165,15 +229,45 @@ footer {
 
     <h3>💻 ทักษะด้านเทคโนโลยี</h3>
 
+
     <div class="skills">
 
-        <span class="skill">
-            GitHub
-        </span>
-        
-        <span class="skill">
-            Autodesk 3ds Max
-        </span>
+
+        <!-- =====================
+             ทักษะ GitHub
+        ====================== -->
+
+        <div class="skill-item">
+
+            <img
+                src="github.png"
+                alt="GitHub"
+            >
+
+            <p>
+                GitHub
+            </p>
+
+        </div>
+
+
+        <!-- =====================
+             ทักษะ Autodesk 3ds Max
+        ====================== -->
+
+        <div class="skill-item">
+
+            <img
+                src="3dsmax.png"
+                alt="Autodesk 3ds Max"
+            >
+
+            <p>
+                Autodesk 3ds Max
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -212,7 +306,8 @@ footer {
     <h3>🚀 เป้าหมายในการพัฒนาทักษะ</h3>
 
     <p>
-      จะนำทักษะมาพัฒนาให้เก่งขึ้นเพื่อนำไปประยุกต์ใช้ในอนาคต
+        จะนำทักษะมาพัฒนาให้เก่งขึ้น
+        เพื่อนำไปประยุกต์ใช้ในอนาคต
     </p>
 
 </div>
@@ -225,6 +320,7 @@ footer {
 <a href="portfolio.html" class="btn">
     📁 กลับหน้า Portfolio
 </a>
+
 
 <a href="index.html" class="btn">
     🏠 กลับหน้าแรก
