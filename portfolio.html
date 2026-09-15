@@ -6,20 +6,24 @@
 <title>แนะนำตัว | Portfolio</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     font-family: Arial, Tahoma, sans-serif;
     color: white;
     min-height: 100vh;
+
     background:
         radial-gradient(circle at 15% 20%, #ff1493, transparent 25%),
         radial-gradient(circle at 85% 15%, #00e5ff, transparent 25%),
         radial-gradient(circle at 80% 85%, #8e2de2, transparent 30%),
-        linear-gradient(135deg,#141e30,#243b55);
+        linear-gradient(135deg, #141e30, #243b55);
 }
 
+/* เมนู */
 nav {
     background: rgba(0,0,0,.45);
     backdrop-filter: blur(12px);
@@ -27,6 +31,7 @@ nav {
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 nav a {
@@ -36,8 +41,11 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover { color: #00e5ff; }
+nav a:hover {
+    color: #00e5ff;
+}
 
+/* กล่อง */
 .container {
     max-width: 850px;
     margin: auto;
@@ -51,37 +59,98 @@ nav a:hover { color: #00e5ff; }
     border-radius: 25px;
     border: 1px solid rgba(255,255,255,.25);
     box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    text-align: center;
 }
 
+/* รูปโปรไฟล์ */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 5px solid #00e5ff;
+
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 35px #00e5ff,
+        0 0 60px rgba(0,229,255,.6);
+
+    margin-bottom: 25px;
+}
+
+/* หัวข้อ */
 h1 {
-    text-align: center;
     color: #00e5ff;
+    margin-bottom: 15px;
 }
 
 h2 {
     color: #ff69b4;
+    margin-top: 30px;
 }
 
-p, li {
+p,
+li {
     font-size: 18px;
     line-height: 1.8;
+}
+
+/* ข้อมูลส่วนตัว */
+.info-box {
+    background: rgba(0,0,0,.20);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.info-box p {
+    margin: 8px 0;
+}
+
+.info-title {
+    color: #00e5ff;
+    font-weight: bold;
 }
 
 li {
     margin: 10px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.35);
+    margin-top: 40px;
 }
 
+/* มือถือ */
 @media(max-width:600px) {
+
     nav a {
         display: inline-block;
         margin: 6px;
         font-size: 14px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p,
+    li {
+        font-size: 16px;
+    }
+
+    .profile-img {
+        width: 160px;
+        height: 160px;
     }
 }
 </style>
@@ -89,6 +158,7 @@ footer {
 
 <body>
 
+<!-- เมนู -->
 <nav>
     <a href="index.html">หน้าหลัก</a>
     <a href="about.html">แนะนำตัว</a>
@@ -98,8 +168,17 @@ footer {
     <a href="contact.html">ติดต่อ</a>
 </nav>
 
+<!-- เนื้อหา -->
 <div class="container">
+
     <div class="card">
+
+        <!-- รูปโปรไฟล์ -->
+        <img
+            src="1788788502619.png"
+            alt="รูปโปรไฟล์ นายธนโชติ วรรณวิสิทธิ์"
+            class="profile-img"
+        >
 
         <h1>👤 แนะนำตัว</h1>
 
@@ -109,11 +188,31 @@ footer {
             สวัสดีครับ ผมชื่อ ธนโชติ วรรณวิสิทธิ์
         </p>
 
-        <p>
-            ผมมีความสนใจด้านการคิดคำนวณ วางแผน
-        </p>
+        <!-- ข้อมูลส่วนตัว -->
+        <div class="info-box">
+
+            <p>
+                <span class="info-title">🏷️ ชื่อเล่น:</span>
+                ใส่ชื่อเล่นของคุณ
+            </p>
+
+            <p>
+                <span class="info-title">🎂 วันเดือนปีเกิด:</span>
+                ใส่วันเดือนปีเกิด
+            </p>
+
+            <p>
+                <span class="info-title">👤 เพศ:</span>
+                ชาย
+            </p>
+
+        </div>
 
         <h2>⚙️ ความสนใจ</h2>
+
+        <p>
+            ผมมีความสนใจด้านการคิดคำนวณและการวางแผน
+        </p>
 
         <ul>
             <li>การคำนวณ</li>
@@ -121,6 +220,7 @@ footer {
         </ul>
 
     </div>
+
 </div>
 
 <footer>
