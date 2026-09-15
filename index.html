@@ -1,137 +1,144 @@
-
-<!DOCTYPE html>
-<html lang="th">
-
+<!DOCTYPE html><html lang="th">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>หน้าแนะนำตัวของฉัน</title>
-
-<style>
-
-body {
-    background-color: #80deea;
-    color: #333;
-    text-align: center;
-    padding: 50px;
-    font-family: Arial, Tahoma, sans-serif;
+<title>หน้าหลัก | Portfolio</title><style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* กล่องแนะนำตัว */
+body {
+    margin: 0;
+    font-family: Arial, Tahoma, sans-serif;
+    background-color: #FFE4E1;
+    color: #333;
+}
+
+nav {
+    background-color: #2c3e50;
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffb6c1;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
 
 .card {
     background: white;
-    border-radius: 15px;
+    padding: 40px;
+    border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 35px;
+    text-align: center;
 }
 
-/* หัวข้อ */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+}
 
 h1 {
     color: #2c3e50;
+    font-size: 38px;
 }
 
 h2 {
     color: #0277bd;
 }
 
-/* ข้อความ */
-
 p {
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
-
-/* รูปโปรไฟล์ */
-.profile {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #3498db;
-    margin: 15px auto;
-}
-
-/* ปุ่ม */
 
 .btn {
     display: inline-block;
-    background: #3498db;
+    background-color: #2c3e50;
     color: white;
     padding: 12px 25px;
-    text-decoration: none;
     border-radius: 8px;
+    text-decoration: none;
     margin-top: 15px;
-    font-weight: bold;
 }
 
 .btn:hover {
-    background: #0277bd;
+    background-color: #3498db;
 }
 
-</style>
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
 
-</head>
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 14px;
+    }
 
+    h1 {
+        font-size: 28px;
+    }
 
-<body>
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+}
+</style></head><body><nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="about.html">แนะนำตัว</a>
+    <a href="education.html">ประวัติการศึกษา</a>
+    <a href="university.html">มหาวิทยาลัย</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav><div class="container"><div class="card">
 
-<div class="card">
+    <img src="1788788502619.png"
+         alt="รูปโปรไฟล์"
+         class="profile-img">
 
-    <!-- รูปโปรไฟล์ -->
-    <img src="1788788502619.jpg"
-     alt="รูปโปรไฟล์"
-     class="profile">
-    
-    <h1>
-        👋 ยินดีต้อนรับสู่โปรไฟล์ของฉัน
-    </h1>
+    <h1>Portfolio</h1>
 
-    <h2>
-        นายธนโชติ วรรณวิสิทธิ์
-    </h2>
-
-    <p>
-        <strong>Thanachot Wannawisit</strong>
-    </p>
-    <p>
-        ว/ด/ป: 14 ตุลาคม 2551
-        อายุ:17
-        เพศ:ชาย
-    </p>
-    <p>
-        ผมกำลังศึกษาอยู่ที่โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-        ชั้นมัธยมศึกษาปีที่ 6/6
-        แผนการเรียน Computer Science and Engineerring (cse)
-    </p>
-    <p>
-        ผมเป็นนักเรียนที่สนใจด้าน
-        <strong>วิศวกรรมศาสตร์</strong>
-        และเทคโนโลยี
-    </p>
-
-    <p>
-        ผมสนใจในการคิดคำนวณ
-    </p>
+    <h2>นายธนโชติ วรรณวิสิทธิ์</h2>
 
     <p>
-        🎯 เป้าหมายของผมคือ
-        การศึกษาต่อในคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา
-        และนำความรู้ไปพัฒนาต่อตัวเองและนำไปใช้ในชีวิต
+        ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio
+        ของผม
     </p>
 
-    <a href="portfolio.html" class="btn">
-        👉 ดูแฟ้มสะสมงานของผม
+    <p>
+        Computer Science & Engineering
+    </p>
+
+    <a href="about.html" class="btn">
+        ดูข้อมูลเพิ่มเติม
     </a>
 
 </div>
 
-</body>
-
+</div><footer>
+    <p>© 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์</p>
+</footer></body>
 </html>
