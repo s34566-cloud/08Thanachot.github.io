@@ -1,347 +1,134 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>แฟ้มสะสมงานของฉัน</title>
+<title>แนะนำตัว | Portfolio</title>
 
 <style>
+* { box-sizing: border-box; }
 
 body {
-    font-family: sans-serif;
-    background-color: #FFE4E1;
-    text-align: center;
-    padding: 30px;
     margin: 0;
+    font-family: Arial, Tahoma, sans-serif;
+    color: white;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 20%, #ff1493, transparent 25%),
+        radial-gradient(circle at 85% 15%, #00e5ff, transparent 25%),
+        radial-gradient(circle at 80% 85%, #8e2de2, transparent 30%),
+        linear-gradient(135deg,#141e30,#243b55);
 }
+
+nav {
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(12px);
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover { color: #00e5ff; }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 850px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-
-/* ส่วนหัว */
-.header {
-    background: #2c3e50;
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
+.card {
+    background: rgba(255,255,255,.13);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
 }
 
-.header h1 {
-    margin: 0;
+h1 {
+    text-align: center;
+    color: #00e5ff;
 }
 
-
-/* รูปโปรไฟล์ */
-.profile-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #3498db;
-    margin: 20px auto;
+h2 {
+    color: #ff69b4;
 }
 
-
-/* รูปผลงาน */
-.work-img {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    max-height: 450px;
-    object-fit: contain;
-    margin: 15px auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+p, li {
+    font-size: 18px;
+    line-height: 1.8;
 }
 
-
-/* การ์ดผลงาน */
-.project-card {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: left;
+li {
+    margin: 10px;
 }
 
-.project-card h3 {
-    color: #2c3e50;
-}
-
-.project-card p {
-    line-height: 1.6;
-}
-
-
-/* ทักษะ */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.skill {
-    background: #3498db;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-}
-
-
-/* ปุ่ม */
-.btn {
-    display: inline-block;
-    background: #2c3e50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.btn:hover {
-    background: #3498db;
-}
-
-
-/* ส่วนท้าย */
 footer {
-    margin-top: 30px;
-    padding: 20px;
-    color: #555;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,.35);
 }
 
-
-/* มือถือ */
-@media (max-width: 600px) {
-
-    body {
-        padding: 15px;
+@media(max-width:600px) {
+    nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 14px;
     }
-
-    .header h1 {
-        font-size: 25px;
-    }
-
-    .profile-img {
-        width: 160px;
-        height: 160px;
-    }
-
-    .work-img {
-        max-height: 300px;
-    }
-
 }
-
 </style>
 </head>
 
-
 <body>
 
+<nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="about.html">แนะนำตัว</a>
+    <a href="education.html">ประวัติการศึกษา</a>
+    <a href="university.html">มหาวิทยาลัย</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
+
 <div class="container">
+    <div class="card">
 
+        <h1>👤 แนะนำตัว</h1>
 
-<!-- ==========================
-     ส่วนหัว
-========================== -->
+        <h2>นายธนโชติ วรรณวิสิทธิ์</h2>
 
-<div class="header">
+        <p>
+            สวัสดีครับ ผมชื่อ ธนโชติ วรรณวิสิทธิ์
+        </p>
 
-    <h1>
-        📁 แฟ้มสะสมงาน
-        <br>
-        (Portfolio)
-    </h1>
+        <p>
+            ผมมีความสนใจด้านเทคโนโลยี คอมพิวเตอร์
+            การเขียนโปรแกรม และการพัฒนาเว็บไซต์
+        </p>
 
-    <h2>
-        นายธนโชติ วรรณวิสิทธิ์
-    </h2>
+        <h2>💻 ความสนใจ</h2>
 
+        <ul>
+            <li>การเขียนโปรแกรม</li>
+            <li>การพัฒนาเว็บไซต์</li>
+            <li>เทคโนโลยีและนวัตกรรม</li>
+            <li>Computer Science & Engineering</li>
+        </ul>
+
+    </div>
 </div>
-
-
-<!-- ==========================
-     ประวัติส่วนตัว
-========================== -->
-
-<div class="project-card" style="text-align:center;">
-
-    <h2></h2>
-
-    <img
-        src="WIN_20260612_10_28_34_Pro.jpg"
-        alt="รูปโปรไฟล์ของฉัน"
-        class="profile-img"
-    >
-
-    <p>
-        
-    </p>
-
-    <p>
-        
-    </p>
-
-</div>
-
-
-<!-- ==========================
-     ผลงานที่ 1
-========================== -->
-
-<div class="project-card">
-
-    <h3>💻 1. งานวิทยาศาสตร์</h3>
-
-    <img
-        src="ผลงาน1.jpg"
-        alt="เข้าร่วมวันวิทยาศาสตร์"
-        class="work-img"
-    >
-
-    <p>
-        <strong>รายละเอียดชิ้นงาน:</strong>
-    </p>
-
-    <p>
-        เป็นวิทยากรจัดแสดงนิทรรศการวิทยาศาสตร์และเทคโนโลยี
-        เนื่องในงานวันวิทยาศาสตร์แห่งชาติ ประจำปีการศึกษา ๒๕๖๙
-    </p>
-
-    <p>
-        <strong>สิ่งที่ได้เรียนรู้:</strong>
-        การเป็นวิทยากรในกิจกรรมวันวิทยาศาสตร์ทำให้ได้รับความรู้
-        และประสบการณ์หลายด้าน ทั้งด้านการสื่อสาร การทำงานร่วมกับผู้อื่น
-        และการถ่ายทอดความรู้ให้ผู้เข้าร่วมกิจกรรม
-        รวมถึงได้ฝึกการพูดต่อหน้าผู้คน
-    </p>
-
-</div>
-
-
-<!-- ==========================
-     ผลงานที่ 2
-========================== -->
-
-<div class="project-card">
-
-    <h3>⚽ 2. ผลงานด้านคุณธรรม</h3>
-
-    <img
-        src="ผลงาน2.jpg"
-        alt="เข้าร่วมฟุตบอลต้านยาเสพติด"
-        class="work-img"
-    >
-
-    <p>
-        <strong>รายละเอียดกิจกรรม:</strong>
-    </p>
-
-    <p>
-        การแข่งขันฟุตบอล ๗ คน ต้านภัยยาเสพติด
-        ระดับชั้นมัธยมศึกษาตอนปลาย
-        เนื่องในกิจกรรมวันต่อต้านยาเสพติดโลก
-        ประจำปี ๒๕๖๙
-    </p>
-
-    <p>
-        <strong>ประโยชน์/ข้อคิด:</strong>
-        ได้เรียนรู้ถึงโทษและผลกระทบของยาเสพติด
-        ฝึกความรับผิดชอบ มีระเบียบวินัย
-        รู้จักการทำงานร่วมกับผู้อื่น
-        และตระหนักถึงการใช้ชีวิตอย่างปลอดภัยและห่างไกลยาเสพติด
-    </p>
-
-</div>
-
-
-<!-- ==========================
-     ผลงานที่ 3
-========================== -->
-
-<div class="project-card">
-
-    <h3>🎊 3. กิจกรรมค่ายเทคโนโลยี</h3>
-
-    <img
-        src="ผลงาน3.jpg"
-        alt="ค่ายยกระดับผลสัมฤทธิ์ทางการเรียนเทคโนโลยี"
-        class="work-img"
-    >
-
-    <p>
-        <strong>รายละเอียดกิจกรรม:</strong>
-    </p>
-
-    <p>
-        ได้เข้าร่วมกิจกรรม
-        <strong>“ค่ายยกระดับผลสัมฤทธิ์ทางการเรียนเทคโนโลยี”</strong>
-        เพื่อพัฒนาความรู้และทักษะด้านเทคโนโลยี
-        ผ่านกิจกรรมเสริมความรู้และทักษะ
-        ที่สอดคล้องกับเนื้อหาของหลักสูตร
-    </p>
-
-    <p>
-        <strong>สิ่งที่ได้เรียนรู้:</strong>
-        ได้เพิ่มพูนความรู้และทักษะด้านเทคโนโลยี
-        ได้เรียนรู้การประยุกต์ใช้เทคโนโลยีในการแก้ปัญหา
-        พัฒนาทักษะการคิดวิเคราะห์และการแก้ปัญหา
-        และได้ฝึกปฏิบัตินำความรู้จากบทเรียนมาใช้จริง
-    </p>
-
-</div>
-
-
-<!-- ==========================
-     เป้าหมาย
-========================== -->
-
-<div class="project-card">
-
-    <h3>🚀 5. เป้าหมายในอนาคต</h3>
-
-    <p>
-        พัฒนาความรู้และความสามารถเพื่อนำไปต่อยอดในการศึกษาต่อและการทำงานในอนาคต
-    </p>
-
-    <p>
-        มีเป้าหมายศึกษาต่อใน
-        <strong>คณะวิศวกรรมศาสตร์</strong>
-    </p>
-
-</div>
-
-
-<!-- ปุ่มกลับหน้าแรก -->
-<a href="skills.html" class="btn">
-    🛠️ ดูทักษะของฉัน
-</a>
-
-<a href="index.html" class="btn">
-    🏠 กลับหน้าแรก
-</a>
-
 
 <footer>
-
-    <p>
-        © 2026 Thanachot Wannawisit
-    </p>
-
+    © 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์
 </footer>
-
-
-</div>
 
 </body>
 </html>
