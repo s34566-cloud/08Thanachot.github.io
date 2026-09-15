@@ -1,61 +1,798 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>มหาวิทยาลัย | Portfolio</title>
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Tahoma,sans-serif;background:#FFE4E1;color:#333}
-nav{background:#2c3e50;padding:18px;text-align:center}
-nav a{color:white;text-decoration:none;margin:0 10px;font-weight:bold}
-nav a:hover{color:#ffb6c1}
-.container{max-width:900px;margin:auto;padding:40px 20px}
-.card{background:white;padding:35px;margin:25px 0;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
-h1{text-align:center;color:#0277bd}
-h2{color:#2c3e50}
-p{font-size:18px;line-height:1.8}
-footer{background:#2c3e50;color:white;text-align:center;padding:20px}
-@media(max-width:600px){nav a{display:inline-block;margin:6px;font-size:14px}}
+
+/* =========================
+   พื้นฐาน
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Tahoma, sans-serif;
+    color: white;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(135deg, #050816, #101b3d, #24104f);
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   พื้นหลัง Animation
+========================= */
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+
+/* วงกลม */
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(5px);
+
+    opacity: 0.7;
+
+    animation: float 10s infinite ease-in-out;
+}
+
+
+/* วงกลมที่ 1 */
+
+.circle:nth-child(1) {
+
+    width: 250px;
+    height: 250px;
+
+    background: #00e5ff;
+
+    top: 10%;
+    left: 5%;
+
+    box-shadow:
+        0 0 80px #00e5ff;
+
+    animation-duration: 9s;
+}
+
+
+/* วงกลมที่ 2 */
+
+.circle:nth-child(2) {
+
+    width: 200px;
+    height: 200px;
+
+    background: #ff1493;
+
+    top: 50%;
+    right: 5%;
+
+    box-shadow:
+        0 0 80px #ff1493;
+
+    animation-duration: 12s;
+}
+
+
+/* วงกลมที่ 3 */
+
+.circle:nth-child(3) {
+
+    width: 150px;
+    height: 150px;
+
+    background: #8e2de2;
+
+    bottom: 5%;
+    left: 35%;
+
+    box-shadow:
+        0 0 70px #8e2de2;
+
+    animation-duration: 7s;
+}
+
+
+/* Animation ลอย */
+
+@keyframes float {
+
+    0% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    25% {
+        transform:
+            translate(80px,-50px)
+            scale(1.15);
+    }
+
+    50% {
+        transform:
+            translate(-40px,80px)
+            scale(.9);
+    }
+
+    75% {
+        transform:
+            translate(60px,40px)
+            scale(1.1);
+    }
+
+    100% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   ดาว
+========================= */
+
+.stars {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size: 60px 60px;
+
+    opacity: .35;
+
+    animation: starsMove 20s linear infinite;
+}
+
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(60px);
+    }
+
+}
+
+
+/* =========================
+   เมนู
+========================= */
+
+nav {
+
+    background: rgba(0,0,0,.45);
+
+    backdrop-filter: blur(15px);
+
+    padding: 18px;
+
+    text-align: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.2);
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin: 0 10px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+
+nav a:hover {
+
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 10px #00e5ff;
+
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+
+}
+
+
+/* =========================
+   หัวข้อ
+========================= */
+
+.main-title {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 10px #00e5ff,
+        0 0 30px #00e5ff;
+
+    animation: titleGlow 2s infinite alternate;
+
+}
+
+
+@keyframes titleGlow {
+
+    from {
+        text-shadow:
+            0 0 10px #00e5ff;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px #00e5ff,
+            0 0 40px #00e5ff;
+    }
+
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.card {
+
+    background:
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(15px);
+
+    padding: 30px;
+
+    margin: 25px 0;
+
+    border-radius: 25px;
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.4);
+
+    transition: .4s;
+
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 0 30px rgba(0,229,255,.4);
+
+}
+
+
+/* =========================
+   รูป
+========================= */
+
+.uni-img {
+
+    width: 100%;
+
+    max-height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border:
+        3px solid #00e5ff;
+
+    box-shadow:
+        0 0 20px #00e5ff;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   หัวข้อย่อย
+========================= */
+
+h2 {
+
+    color: #ff69b4;
+
+    text-shadow:
+        0 0 10px rgba(255,105,180,.5);
+
+}
+
+
+p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================
+   รอบมหาวิทยาลัย
+========================= */
+
+.rounds {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 25px;
+
+}
+
+
+.round-card {
+
+    background:
+        rgba(0,0,0,.25);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    transition: .4s;
+
+}
+
+
+.round-card:hover {
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0 0 25px rgba(255,105,180,.5);
+
+}
+
+
+.round-icon {
+
+    font-size: 50px;
+
+}
+
+
+.round-card h3 {
+
+    color: #00e5ff;
+
+    font-size: 23px;
+
+}
+
+
+.round-card p {
+
+    font-size: 16px;
+
+}
+
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.btn {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 11px 22px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #00c6ff,
+            #8e2de2
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 15px rgba(0,198,255,.5);
+
+    transition: .3s;
+
+}
+
+
+.btn:hover {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        0 0 25px #00e5ff;
+
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+
+    background:
+        rgba(0,0,0,.4);
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+}
+
+
+footer p {
+
+    font-size: 16px;
+
+}
+
+
+/* =========================
+   มือถือ
+========================= */
+
+@media(max-width:600px) {
+
+    nav a {
+
+        display: inline-block;
+
+        margin: 6px;
+
+        font-size: 14px;
+
+    }
+
+    .main-title {
+
+        font-size: 30px;
+
+    }
+
+    .card {
+
+        padding: 22px;
+
+    }
+
+    .rounds {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    p {
+
+        font-size: 16px;
+
+    }
+
+    .circle:nth-child(1) {
+
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .circle:nth-child(2) {
+
+        width: 130px;
+        height: 130px;
+
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     พื้นหลัง Animation
+========================= -->
+
+<div class="background">
+
+    <div class="stars"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+</div>
+
+
+<!-- =========================
+     เมนู
+========================= -->
+
 <nav>
+
 <a href="index.html">หน้าหลัก</a>
+
 <a href="about.html">แนะนำตัว</a>
+
 <a href="education.html">ประวัติการศึกษา</a>
+
 <a href="university.html">มหาวิทยาลัย</a>
+
 <a href="portfolio.html">ผลงาน</a>
+
 <a href="contact.html">ติดต่อ</a>
+
 </nav>
+
+
+<!-- =========================
+     เนื้อหา
+========================= -->
 
 <div class="container">
 
-<h1>🏫 มหาวิทยาลัย</h1>
+
+<h1 class="main-title">
+
+🏫 มหาวิทยาลัยที่สนใจ
+
+</h1>
+
+
+<!-- มหาวิทยาลัย -->
 
 <div class="card">
-<h2>คณะที่สนใจ</h2>
-<p>คณะวิศวกรรมศาสตร์</p>
-<p>สาขาที่สนใจ: Computer Science / Computer Engineering</p>
+
+<h2>🎓 มหาวิทยาลัยที่สนใจ</h2>
+
+
+<img
+    src="university.jpg"
+    alt="รูปมหาวิทยาลัย"
+    class="uni-img"
+>
+
+
+<p>
+
+<b>ชื่อมหาวิทยาลัย:</b>
+
+มหาวิทยาลัยบูรพา
+
+</p>
+
+
+<p>
+
+<b>คณะที่สนใจ:</b>
+
+คณะวิศวกรรมศาสตร์
+
+</p>
+
+
+<p>
+
+<b>สาขาที่สนใจ:</b>
+
+วิศวกรรมโยธา/วิศวกรรมไฟฟ้า
+
+</p>
+
 </div>
 
+
+<!-- รอบ -->
+
 <div class="card">
-<h2>เป้าหมายในอนาคต</h2>
+
+<h2>📋 รอบการเข้ามหาวิทยาลัย</h2>
+
+
+<div class="rounds">
+
+
+<!-- Portfolio -->
+
+<div class="round-card">
+
+<div class="round-icon">
+📁
+</div>
+
+<h3>
+รอบ Portfolio
+</h3>
+
 <p>
+
+รอบที่ใช้แฟ้มสะสมผลงาน
+เพื่อแสดงความสามารถ
+กิจกรรม ผลงาน
+และความสนใจของผู้สมัคร
+
+</p>
+
+<a href="#" class="btn">
+Portfolio
+</a>
+
+</div>
+
+
+<!-- Quota -->
+
+<div class="round-card">
+
+<div class="round-icon">
+🎯
+</div>
+
+<h3>
+รอบ Quota
+</h3>
+
+<p>
+
+รอบโควตาสำหรับผู้สมัคร
+ที่มีคุณสมบัติตามเงื่อนไข
+หรือโครงการของมหาวิทยาลัย
+
+</p>
+
+<a href="#" class="btn">
+Quota
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- เป้าหมาย -->
+
+<div class="card">
+
+<h2>
+🚀 เป้าหมายในอนาคต
+</h2>
+
+<p>
+
 ต้องการศึกษาต่อในระดับมหาวิทยาลัย
 และพัฒนาความรู้ด้านคอมพิวเตอร์
 การเขียนโปรแกรม และเทคโนโลยี
+เพื่อนำความรู้ไปใช้ในการทำงาน
+และสร้างผลงานที่เป็นประโยชน์ในอนาคต
+
 </p>
-</div>
 
 </div>
+
+
+</div>
+
+
+<!-- Footer -->
 
 <footer>
-<p>© 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์</p>
+
+<p>
+
+© 2026 Portfolio |
+นายธนโชติ วรรณวิสิทธิ์
+
+</p>
+
 </footer>
 
+
 </body>
+
 </html>
