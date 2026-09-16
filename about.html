@@ -6,223 +6,233 @@
 <title>แนะนำตัว | Portfolio</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+color:white;
+min-height:100vh;
+background:
+radial-gradient(circle at 10% 20%,#ff69b4,transparent 25%),
+radial-gradient(circle at 90% 10%,#00c6ff,transparent 25%),
+radial-gradient(circle at 80% 90%,#8e2de2,transparent 30%),
+linear-gradient(135deg,#141e30,#243b55);
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Tahoma, sans-serif;
-    color: white;
-    min-height: 100vh;
-
-    background:
-        radial-gradient(circle at 15% 20%, #ff1493, transparent 25%),
-        radial-gradient(circle at 85% 15%, #00e5ff, transparent 25%),
-        radial-gradient(circle at 80% 85%, #8e2de2, transparent 30%),
-        linear-gradient(135deg, #141e30, #243b55);
+nav{
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(15px);
+padding:15px 20px;
+position:sticky;
+top:0;
+z-index:100;
 }
 
-/* เมนู */
-nav {
-    background: rgba(0,0,0,.45);
-    backdrop-filter: blur(12px);
-    padding: 18px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+.nav-container{
+max-width:1000px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#00e5ff;
 }
 
-nav a:hover {
-    color: #00e5ff;
+.menu{
+display:flex;
+gap:8px;
+list-style:none;
+margin:0;
+padding:0;
 }
 
-/* กล่อง */
-.container {
-    max-width: 850px;
-    margin: auto;
-    padding: 60px 20px;
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:10px;
 }
 
-.card {
-    background: rgba(255,255,255,.13);
-    backdrop-filter: blur(15px);
-    padding: 40px;
-    border-radius: 25px;
-    border: 1px solid rgba(255,255,255,.25);
-    box-shadow: 0 20px 50px rgba(0,0,0,.35);
-    text-align: center;
+.menu a:hover{color:#ff69b4}
+
+.menu-icon{
+display:none;
+font-size:30px;
+cursor:pointer;
 }
 
-/* รูปโปรไฟล์ */
-.profile-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+#menu-toggle{display:none}
 
-    border: 5px solid #00e5ff;
-
-    box-shadow:
-        0 0 15px #00e5ff,
-        0 0 35px #00e5ff,
-        0 0 60px rgba(0,229,255,.6);
-
-    margin-bottom: 25px;
+.container{
+max-width:850px;
+margin:auto;
+padding:60px 20px;
 }
 
-/* หัวข้อ */
-h1 {
-    color: #00e5ff;
-    margin-bottom: 15px;
+.card{
+background:rgba(255,255,255,.13);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.25);
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+text-align:center;
 }
 
-h2 {
-    color: #ff69b4;
-    margin-top: 30px;
+.profile-img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #00e5ff;
+box-shadow:0 0 30px #00e5ff;
+margin-bottom:20px;
 }
 
-p,
-li {
-    font-size: 18px;
-    line-height: 1.8;
+h1{color:#00e5ff}
+h2{color:#ff69b4}
+
+p{
+font-size:18px;
+line-height:1.8;
 }
 
-/* ข้อมูลส่วนตัว */
-.info-box {
-    background: rgba(0,0,0,.20);
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 20px;
-    text-align: left;
+.info-box{
+background:rgba(0,0,0,.2);
+padding:20px;
+border-radius:15px;
+margin-top:20px;
+text-align:left;
 }
 
-.info-box p {
-    margin: 8px 0;
+.info-title{
+color:#00e5ff;
+font-weight:bold;
 }
 
-.info-title {
-    color: #00e5ff;
-    font-weight: bold;
+footer{
+text-align:center;
+padding:25px;
+background:rgba(0,0,0,.35);
+margin-top:40px;
 }
 
-li {
-    margin: 10px;
+@media(max-width:700px){
+
+.menu-icon{display:block}
+
+.menu{
+display:none;
+width:100%;
+flex-direction:column;
+margin-top:15px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: rgba(0,0,0,.35);
-    margin-top: 40px;
+#menu-toggle:checked ~ .menu{display:flex}
+
+.menu a{
+display:block;
+text-align:center;
 }
 
-/* มือถือ */
-@media(max-width:600px) {
+.nav-container{flex-wrap:wrap}
 
-    nav a {
-        display: inline-block;
-        margin: 6px;
-        font-size: 14px;
-    }
+.card{padding:30px 20px}
 
-    .card {
-        padding: 30px 20px;
-    }
+.profile-img{
+width:160px;
+height:160px;
+}
 
-    h1 {
-        font-size: 28px;
-    }
-
-    p,
-    li {
-        font-size: 16px;
-    }
-
-    .profile-img {
-        width: 160px;
-        height: 160px;
-    }
+p{font-size:16px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- เมนู -->
 <nav>
-    <a href="index.html">หน้าหลัก</a>
-    <a href="about.html">แนะนำตัว</a>
-    <a href="education.html">ประวัติการศึกษา</a>
-    <a href="university.html">มหาวิทยาลัย</a>
-    <a href="portfolio.html">ผลงาน</a>
-    <a href="contact.html">ติดต่อ</a>
+<div class="nav-container">
+
+<div class="logo">PORTFOLIO</div>
+
+<label for="menu-toggle" class="menu-icon">☰</label>
+<input type="checkbox" id="menu-toggle">
+
+<ul class="menu">
+<li><a href="index.html">หน้าหลัก</a></li>
+<li><a href="about.html">แนะนำตัว</a></li>
+<li><a href="education.html">ประวัติการศึกษา</a></li>
+<li><a href="university.html">มหาวิทยาลัย</a></li>
+<li><a href="portfolio.html">ผลงาน</a></li>
+<li><a href="skills.html">ทักษะ</a></li>
+<li><a href="contact.html">ติดต่อ</a></li>
+</ul>
+
+</div>
 </nav>
 
-<!-- เนื้อหา -->
 <div class="container">
 
-    <div class="card">
+<div class="card">
 
-        <!-- รูปโปรไฟล์ -->
-        <img
-            src="1788788502619.jpg"
-            alt="รูปโปรไฟล์ นายธนโชติ วรรณวิสิทธิ์"
-            class="profile-img"
-        >
+<img src="1788788502619.jpg"
+class="profile-img"
+alt="รูปโปรไฟล์">
 
-        <h1>👤 แนะนำตัว</h1>
+<h1>👤 แนะนำตัว</h1>
 
-        <h2>นายธนโชติ วรรณวิสิทธิ์</h2>
+<h2>นายธนโชติ วรรณวิสิทธิ์</h2>
 
-        <p>
-            สวัสดีครับ ผมชื่อ ธนโชติ วรรณวิสิทธิ์
-        </p>
+<p>
+สวัสดีครับ ผมชื่อ ธนโชติ วรรณวิสิทธิ์
+</p>
 
-        <!-- ข้อมูลส่วนตัว -->
-        <div class="info-box">
+<div class="info-box">
 
-            <p>
-                <span class="info-title">🏷️ ชื่อเล่น:</span>
-                ฟอร์ด
-            </p>
+<p>
+<span class="info-title">🏷️ ชื่อเล่น:</span>
+ฟอร์ด
+</p>
 
-            <p>
-                <span class="info-title">🎂 วันเดือนปีเกิด:</span>
-                14 ตุลาคม 2551
-            </p>
+<p>
+<span class="info-title">🎂 วันเดือนปีเกิด:</span>
+14 ตุลาคม 2551
+</p>
 
-            <p>
-                <span class="info-title">👤 เพศ:</span>
-                ชาย
-            </p>
-
-        </div>
-
-        <h2>⚙️ ความสนใจ</h2>
-
-        <p>
-        ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6 และมีความสนใจศึกษาต่อด้าน วิศวกรรมโยธา ผมสนใจด้านการออกแบบและก่อสร้างอาคาร ถนน สะพาน รวมถึงงานโครงสร้างต่าง ๆ และชอบการคิดวิเคราะห์ การคำนวณ และการแก้ไขปัญหาอย่างเป็นระบบ ซึ่งเป็นทักษะสำคัญสำหรับวิศวกรโยธา
-นอกจากนี้ ผมยังเข้าร่วมกิจกรรมต่าง ๆ เช่น วิทยากรวันวิทยาศาสตร์ กิจกรรมต่อต้านยาเสพติด และค่ายด้านเทคโนโลยี ทำให้ได้พัฒนาทักษะการสื่อสารการทำงานร่วมกับผู้อื่นและความรับผิดชอบ
-ในอนาคต ผมตั้งใจศึกษาต่อ คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา เพื่อพัฒนาความรู้และทักษะและนำไปใช้สร้างสรรค์งานที่มีคุณภาพปลอดภัยและเป็นประโยชน์ต่อสังคมครับ
-        </p>
-
-
-    </div>
+<p>
+<span class="info-title">🎓 ระดับการศึกษา:</span>
+มัธยมศึกษาปีที่ 6
+</p>
 
 </div>
 
+<h2>⚙️ ความสนใจ</h2>
+
+<p>
+ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
+และมีความสนใจศึกษาต่อด้านวิศวกรรมโยธา
+สนใจด้านการออกแบบและก่อสร้างอาคาร ถนน
+สะพาน รวมถึงงานโครงสร้างต่าง ๆ
+</p>
+
+<p>
+ผมชอบการคิดวิเคราะห์ การคำนวณ
+และการแก้ไขปัญหาอย่างเป็นระบบ
+นอกจากนี้ยังสนใจกิจกรรมด้านวิทยาศาสตร์
+เทคโนโลยี และการทำงานร่วมกับผู้อื่น
+</p>
+
+</div>
+</div>
+
 <footer>
-    © 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์
+© 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์
 </footer>
 
 </body>
