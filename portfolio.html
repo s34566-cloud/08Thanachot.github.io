@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผลงาน | Portfolio</title><style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+color:white;
+min-height:100vh;
+background:
+radial-gradient(circle at 10% 20%,#ff69b4,transparent 25%),
+radial-gradient(circle at 90% 10%,#00c6ff,transparent 25%),
+radial-gradient(circle at 80% 90%,#8e2de2,transparent 30%),
+linear-gradient(135deg,#141e30,#243b55);
+}
+
+/* =========================
+   เมนู
+========================= */
+
+nav{
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(15px);
+padding:15px 20px;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-container{
+max-width:1000px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+.menu{
+display:flex;
+gap:8px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:10px;
+}
+
+.menu a:hover{
+color:#ff69b4;
+}
+
+.menu-icon{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
+
+#menu-toggle{
+display:none;
+}
+
+/* =========================
+   เนื้อหา
+========================= */
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:55px 20px;
+}
+
+h1{
+text-align:center;
+color:#00e5ff;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+/* =========================
+   การ์ดผลงาน
+========================= */
+
+.project-card{
+background:rgba(255,255,255,.13);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.25);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(255,105,180,.5);
+}
+
+.project-card h2{
+color:#ff69b4;
+}
+
+/* =========================
+   รูปกิจกรรม
+========================= */
+
+.work-img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+border:3px solid rgba(0,229,255,.6);
+box-shadow:0 0 15px rgba(0,229,255,.3);
+}
+
+/* =========================
+   ข้อความ
+========================= */
+
+.project-card p{
+font-size:17px;
+line-height:1.8;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+text-align:center;
+padding:25px;
+background:rgba(0,0,0,.35);
+margin-top:40px;
+}
+
+/* =========================
+   มือถือ
+========================= */
+
+@media(max-width:700px){
+
+.menu-icon{
+display:block;
+}
+
+.menu{
+display:none;
+width:100%;
+flex-direction:column;
+margin-top:15px;
+}
+
+#menu-toggle:checked ~ .menu{
+display:flex;
+}
+
+.menu a{
+display:block;
+text-align:center;
+}
+
+.nav-container{
+flex-wrap:wrap;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:30px;
+}
+
+.work-img{
+height:220px;
+}
+
+.project-card p{
+font-size:16px;
+}
+
+}
+</style></head><body><!-- =========================
+     เมนู
+========================= --><nav><div class="nav-container"><div class="logo">
+PORTFOLIO
+</div><label for="menu-toggle" class="menu-icon">
+☰
+</label><input type="checkbox" id="menu-toggle"><ul class="menu"><li>
+<a href="index.html">หน้าหลัก</a>
+</li><li>
+<a href="about.html">แนะนำตัว</a>
+</li><li>
+<a href="education.html">ประวัติการศึกษา</a>
+</li><li>
+<a href="university.html">มหาวิทยาลัย</a>
+</li><li>
+<a href="portfolio.html">ผลงาน</a>
+</li><li>
+<a href="skills.html">ทักษะ</a>
+</li><li>
+<a href="contact.html">ติดต่อ</a>
+</li></ul></div></nav><!-- =========================
+     เนื้อหา
+========================= --><div class="container"><h1>
+🏆 ผลงานและกิจกรรม
+</h1><div class="projects"><!-- =========================
+     กิจกรรมที่ 1
+========================= --><div class="project-card"><img
+src="science.jpg"
+alt="กิจกรรมวิทยากรวันวิทยาศาสตร์"
+class="work-img"
+
+«»
+
+<h2>
+🔬 วิทยากรวันวิทยาศาสตร์
+</h2><p>
+เข้าร่วมกิจกรรมในบทบาทวิทยากร
+ทำหน้าที่ให้ความรู้และสื่อสารข้อมูล
+ทางวิทยาศาสตร์แก่ผู้เข้าร่วมกิจกรรม
+</p><p>
+<b>สิ่งที่ได้รับ:</b>
+ได้พัฒนาทักษะการพูด การนำเสนอ
+ความมั่นใจ และการทำงานร่วมกับผู้อื่น
+</p></div><!-- =========================
+     กิจกรรมที่ 2
+========================= --><div class="project-card"><img
+src="drug.jpg"
+alt="กิจกรรมต่อต้านยาเสพติด"
+class="work-img"
+
+«»
+
+<h2>
+🚫 กิจกรรมต่อต้านยาเสพติด
+</h2><p>
+เข้าร่วมกิจกรรมรณรงค์ต่อต้านยาเสพติด
+และร่วมสร้างความตระหนักถึงผลกระทบ
+ของยาเสพติดในสังคม
+</p><p>
+<b>สิ่งที่ได้รับ:</b>
+ความรับผิดชอบ การทำงานร่วมกัน
+และการมีส่วนร่วมกับกิจกรรมของโรงเรียน
+</p></div><!-- =========================
+     กิจกรรมที่ 3
+========================= --><div class="project-card"><img
+src="technology.jpg"
+alt="ค่ายเทคโนโลยี"
+class="work-img"
+
+«»
+
+<h2>
+💻 ค่ายเทคโนโลยี
+</h2><p>
+เข้าร่วมค่ายยกระดับผลสัมฤทธิ์
+ทางการเรียนเทคโนโลยี
+ผ่านกิจกรรมเสริมความรู้
+และทักษะที่สอดคล้องกับหลักสูตร
+</p><p>
+<b>สิ่งที่ได้รับ:</b>
+ความรู้ด้านเทคโนโลยีและทักษะ
+การแก้ไขปัญหาอย่างเป็นระบบ
+</p></div><!-- =========================
+     กิจกรรมที่ 4
+========================= --><div class="project-card"><img
+src="website.jpg"
+alt="เว็บไซต์ Portfolio"
+class="work-img"
+
+«»
+
+<h2>
+🌐 เว็บไซต์ Portfolio
+</h2><p>
+สร้างเว็บไซต์ Portfolio ด้วย HTML และ CSS
+เพื่อรวบรวมข้อมูลส่วนตัว ประวัติการศึกษา
+ผลงาน ทักษะ และข้อมูลการติดต่อ
+</p><p>
+<b>สิ่งที่ได้รับ:</b>
+ฝึกการเขียนโค้ด การออกแบบเว็บไซต์
+และการจัดโครงสร้างหน้าเว็บ
+</p></div></div></div><!-- =========================
+     Footer
+========================= --><footer>© 2026 Portfolio |
+นายธนโชติ วรรณวิสิทธิ์
+
+</footer></body>
+</html>
