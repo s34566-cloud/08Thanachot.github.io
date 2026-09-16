@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>หน้าหลัก | Portfolio</title>
 
 <style>
@@ -16,6 +17,7 @@ body {
     font-family: Arial, Tahoma, sans-serif;
     color: white;
     min-height: 100vh;
+
     background:
         radial-gradient(circle at 10% 20%, #ff69b4 0, transparent 25%),
         radial-gradient(circle at 90% 10%, #00c6ff 0, transparent 25%),
@@ -23,29 +25,63 @@ body {
         linear-gradient(135deg, #141e30, #243b55);
 }
 
-/* เมนู */
+/* ===== เมนู ===== */
 nav {
     background: rgba(0,0,0,0.45);
     backdrop-filter: blur(12px);
-    padding: 18px;
-    text-align: center;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+.nav-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
     font-weight: bold;
-}
-
-nav a:hover {
     color: #00e5ff;
 }
 
-/* กล่องหลัก */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.menu a:hover {
+    color: #00e5ff;
+    background: rgba(255,255,255,0.1);
+}
+
+/* ===== เนื้อหา ===== */
 .container {
     max-width: 900px;
     margin: auto;
@@ -62,7 +98,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* รูปโปรไฟล์ */
 .profile-img {
     width: 200px;
     height: 200px;
@@ -86,21 +121,15 @@ p {
     line-height: 1.8;
 }
 
-/* ปุ่ม */
 .btn {
     display: inline-block;
     margin-top: 20px;
     padding: 13px 28px;
     border-radius: 30px;
-    background: linear-gradient(45deg, #00c6ff, #8e2de2);
+    background: linear-gradient(45deg,#00c6ff,#8e2de2);
     color: white;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 0 20px rgba(0,198,255,0.5);
-}
-
-.btn:hover {
-    transform: scale(1.05);
 }
 
 footer {
@@ -109,11 +138,35 @@ footer {
     background: rgba(0,0,0,0.35);
 }
 
-@media(max-width:600px) {
-    nav a {
-        display: inline-block;
-        margin: 6px;
-        font-size: 14px;
+/* ===== มือถือ ===== */
+@media(max-width:700px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
     }
 
     .card {
@@ -135,40 +188,54 @@ footer {
 <body>
 
 <nav>
-    <a href="index.html">หน้าหลัก</a>
-    <a href="about.html">แนะนำตัว</a>
-    <a href="education.html">ประวัติการศึกษา</a>
-    <a href="university.html">มหาวิทยาลัย</a>
-    <a href="portfolio.html">ผลงาน</a>
-    <a href="contact.html">ติดต่อ</a>
+<div class="nav-container">
+
+<div class="logo">PORTFOLIO</div>
+
+<label for="menu-toggle" class="menu-icon">☰</label>
+
+<input type="checkbox" id="menu-toggle">
+
+<ul class="menu">
+<li><a href="index.html">หน้าหลัก</a></li>
+<li><a href="about.html">แนะนำตัว</a></li>
+<li><a href="education.html">การศึกษา</a></li>
+<li><a href="university.html">มหาวิทยาลัย</a></li>
+<li><a href="portfolio.html">ผลงาน</a></li>
+<li><a href="contact.html">ติดต่อ</a></li>
+</ul>
+
+</div>
 </nav>
 
 <div class="container">
-    <div class="card">
 
-        <img src="WIN_20260612_10_28_34_Pro.jpg"
-             alt="รูปโปรไฟล์"
-             class="profile-img">
+<div class="card">
 
-        <h1>PORTFOLIO</h1>
+<img src="WIN_20260612_10_28_34_Pro.jpg"
+     alt="รูปโปรไฟล์"
+     class="profile-img">
 
-        <h2>นายธนโชติ วรรณวิสิทธิ์</h2>
+<h1>PORTFOLIO</h1>
 
-        <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของผม</p>
+<h2>นายธนโชติ วรรณวิสิทธิ์</h2>
 
-        <p>
-            
-        </p>
+<p>ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของผม</p>
 
-        <a href="about.html" class="btn">
-            ดูข้อมูลเพิ่มเติม
-        </a>
+<p>
+เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติ
+การศึกษา ผลงาน กิจกรรม และเป้าหมายในอนาคต
+</p>
 
-    </div>
+<a href="about.html" class="btn">
+ดูข้อมูลเพิ่มเติม
+</a>
+
+</div>
 </div>
 
 <footer>
-    © 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์
+© 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์
 </footer>
 
 </body>
