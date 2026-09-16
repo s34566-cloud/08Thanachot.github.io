@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ทักษะ | Portfolio</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+color:white;
+min-height:100vh;
+background:
+radial-gradient(circle at 10% 20%,#ff69b4,transparent 25%),
+radial-gradient(circle at 90% 10%,#00c6ff,transparent 25%),
+radial-gradient(circle at 80% 90%,#8e2de2,transparent 30%),
+linear-gradient(135deg,#141e30,#243b55);
+}
+
+nav{
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(15px);
+padding:15px 20px;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-container{
+max-width:1000px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+.menu{
+display:flex;
+gap:8px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:10px;
+}
+
+.menu a:hover{color:#ff69b4}
+
+.menu-icon{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
+
+#menu-toggle{display:none}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:55px 20px;
+}
+
+h1{
+text-align:center;
+color:#00e5ff;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.skill-card{
+background:rgba(255,255,255,.13);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.25);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.skill-icon{
+font-size:50px;
+text-align:center;
+}
+
+.skill-card h2{
+text-align:center;
+color:#ff69b4;
+}
+
+.skill-card p{
+font-size:17px;
+line-height:1.8;
+}
+
+.skill-bar{
+background:rgba(0,0,0,.3);
+height:12px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-progress{
+height:100%;
+border-radius:20px;
+background:linear-gradient(90deg,#00c6ff,#ff69b4);
+}
+
+.html{width:80%}
+.css{width:75%}
+.web{width:70%}
+.tech{width:80%}
+.team{width:85%}
+.problem{width:80%}
+
+footer{
+text-align:center;
+padding:25px;
+background:rgba(0,0,0,.35);
+margin-top:40px;
+}
+
+@media(max-width:700px){
+
+.menu-icon{display:block}
+
+.menu{
+display:none;
+width:100%;
+flex-direction:column;
+margin-top:15px;
+}
+
+#menu-toggle:checked ~ .menu{display:flex}
+
+.menu a{
+display:block;
+text-align:center;
+}
+
+.nav-container{flex-wrap:wrap}
+
+.skills{
+grid-template-columns:1fr;
+}
+
+h1{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-container">
+
+<div class="logo">PORTFOLIO</div>
+
+<label for="menu-toggle" class="menu-icon">☰</label>
+<input type="checkbox" id="menu-toggle">
+
+<ul class="menu">
+<li><a href="index.html">หน้าหลัก</a></li>
+<li><a href="about.html">แนะนำตัว</a></li>
+<li><a href="education.html">ประวัติการศึกษา</a></li>
+<li><a href="university.html">มหาวิทยาลัย</a></li>
+<li><a href="portfolio.html">ผลงาน</a></li>
+<li><a href="skills.html">ทักษะ</a></li>
+<li><a href="contact.html">ติดต่อ</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container">
+
+<h1>⚙️ ทักษะของฉัน</h1>
+
+<div class="skills">
+
+<div class="skill-card">
+<div class="skill-icon">🌐</div>
+<h2>HTML</h2>
+<p>
+มีพื้นฐานการสร้างโครงสร้างเว็บไซต์
+ด้วยภาษา HTML และสามารถเชื่อมโยง
+หน้าเว็บไซต์หลายหน้าได้
+</p>
+<div class="skill-bar">
+<div class="skill-progress html"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">🎨</div>
+<h2>CSS</h2>
+<p>
+สามารถตกแต่งเว็บไซต์ด้วย CSS
+เช่น สี พื้นหลัง กล่องข้อความ
+และการออกแบบสำหรับมือถือ
+</p>
+<div class="skill-bar">
+<div class="skill-progress css"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">💻</div>
+<h2>การสร้างเว็บไซต์</h2>
+<p>
+สามารถสร้างเว็บไซต์ Portfolio
+แบบหลายหน้า พร้อมระบบเมนู
+เชื่อมโยงระหว่างหน้า
+</p>
+<div class="skill-bar">
+<div class="skill-progress web"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">⚙️</div>
+<h2>เทคโนโลยี</h2>
+<p>
+มีความสนใจด้านคอมพิวเตอร์
+เทคโนโลยี และการเรียนรู้
+เครื่องมือใหม่ ๆ
+</p>
+<div class="skill-bar">
+<div class="skill-progress tech"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">🤝</div>
+<h2>การทำงานเป็นทีม</h2>
+<p>
+สามารถทำงานร่วมกับผู้อื่น
+แบ่งหน้าที่ และรับผิดชอบงาน
+ที่ได้รับมอบหมาย
+</p>
+<div class="skill-bar">
+<div class="skill-progress team"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">🧠</div>
+<h2>การแก้ไขปัญหา</h2>
+<p>
+มีทักษะการคิดวิเคราะห์
+และแก้ไขปัญหาอย่างเป็นขั้นตอน
+</p>
+<div class="skill-bar">
+<div class="skill-progress problem"></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<footer>
+© 2026 Portfolio | นายธนโชติ วรรณวิสิทธิ์
+</footer>
+
+</body>
+</html>
